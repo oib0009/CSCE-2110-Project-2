@@ -1,0 +1,25 @@
+CSCE 2110 Project 2 - Design Document
+
+OUTLINE ONLY
+
+1. System overview
+Smart Campus Navigation and Facility Analytics System.
+
+2. Modules
+- FacilityHashTable: custom string hash; uppercase-normalized facility IDs; collision handling and diagnostics.
+- CampusGraph: undirected building/walkway graph; adjacency lists; BFS reachability and shortest path.
+- DepartmentTree: general tree with any number of children; search, insertion, hierarchy display, preorder, postorder, level-order, and statistics.
+- DataLoader: parse and validate the four instructor files; report malformed or inconsistent records.
+- main.cpp: load data and coordinate menu/input handling.
+
+3. Required data files and load order
+1) buildings.txt  2) connections.txt  3) facilities.txt  4) departments.txt
+
+4. Algorithms and decisions
+Complete this section with the team's actual decisions, including hash function, collision strategy, graph traversal behavior, and department root/parent rules.
+
+5. Error handling and input validation
+Document actual behavior after implementation.
+
+6. Team responsibilities
+Refer to CONTRIBUTIONS.txt.

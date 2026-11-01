@@ -1,0 +1,10 @@
+CSCE 2110 Project 2 - Test Results
+
+For each test, include:
+- Test ID and purpose
+- Input files or user input
+- Expected behavior
+- Actual observed result
+- Pass/Fail
+
+Required future tests include malformed/missing data files, invalid menu input, facility ID case normalization, deliberate hash collision using testdata, BFS reachability, shortest path, disconnected graph, department search/insertion, and all required tree traversals/statistics.

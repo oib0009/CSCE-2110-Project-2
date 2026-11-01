@@ -1,0 +1,14 @@
+# Compiled programs and object files
+*.o
+*.obj
+*.exe
+*.out
+/a.out
+/build/
+/bin/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
