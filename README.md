@@ -4,7 +4,7 @@
 
 ### Team Members
 - Olu
-- Ash
+- Ashish
 - Uriel
 
 ## Project Goal
