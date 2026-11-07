@@ -1,5 +1,5 @@
-//purpose: Campus graph, degree reporting, and BFS reachability. 
-//Author: Ashish Thapa.
+//purpose: Campus graph, degree reporting, and BFS reachability
+//Author: Ashish Thapa
 #ifndef CAMPUS_GRAPH_H
 #define CAMPUS_GRAPH_H
 #include <string>
@@ -13,9 +13,9 @@ class CampusGraph {
     std::vector<Building> buildings_;
     std::size_t edges_=0;
 public:
-    int findBuilding(const std::string& name) const; //returns -1 when name is not an accepted building.
+    int findBuilding(const std::string& name) const; //returns -1 when name is not an accepted building
     bool addBuilding(const std::string& name);
-    bool addConnection(const std::string& from, const std::string& to); //rejects unknown endpoints, self-edges and undirected duplicates.
+    bool addConnection(const std::string& from, const std::string& to); //rejects unknown endpoints, self-edges and undirected duplicates
     std::string canonicalName(const std::string& name) const;
     void display() const;
     void displayStats() const;
