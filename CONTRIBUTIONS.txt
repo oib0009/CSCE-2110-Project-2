@@ -3,8 +3,10 @@ CSCE 2110 Project 2 - Contributions
 Team members:
 
 Olu:
-- Assigned files/tasks: 
-- Meaningful commits: 
+- Assigned files/tasks: DataLoader.h/.cpp, Facility.h, FacilityHashTable.h/.cpp;
+  parse and validate the instructor-provided data files and implement facility
+  lookup by normalized ID.
+- Meaningful commits: To be recorded when commits are made.
 
 Ash:
 - Assigned files/tasks: 

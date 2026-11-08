@@ -1,0 +1,8 @@
+# FacilityID|FacilityName|BuildingName|Category
+F001|Reading Room|Library|Library
+f014|Tutoring Center|library|Tutoring
+f001|Duplicate ID|Library|Library
+F1|Invalid ID|Library|Library
+F015|Unknown location|Missing|Library
+bad|row
+F016||Library|Library

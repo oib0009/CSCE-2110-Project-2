@@ -1,10 +1,21 @@
 CSCE 2110 Project 2 - Test Results
 
-For each test, include:
-- Test ID and purpose
-- Input files or user input
-- Expected behavior
-- Actual observed result
-- Pass/Fail
+OLU-1 - Load instructor data files [M1]
+Input: data/
+Expected: Load 7 buildings, 6 connections, 10 facilities, and 7 departments.
+Actual: Loaded all expected records with no warnings.
+Result: Pass.
 
-Required future tests include malformed/missing data files, invalid menu input, facility ID case normalization, deliberate hash collision using testdata, BFS reachability, shortest path, disconnected graph, department search/insertion, and all required tree traversals/statistics.
+OLU-2 - Facility ID collision and duplicate [M1]
+Input: testdata/hash_collision/
+Expected: F001 and F014 collide; lowercase f001 is rejected as a duplicate.
+Actual: facilities.txt: 2 accepted, 5 rejected (capacity 17, entries 2,
+        collisions 1). The first F001 record was retained.
+Result: Pass.
+
+OLU-3 - Invalid records and missing files [M1]
+Input: Invalid records in testdata/hash_collision/; nonexistent data directory.
+Expected: Invalid records are rejected with warnings; missing files do not crash.
+Actual: All invalid fixture records were rejected with warnings; missing files
+        produced four warnings without a crash.
+Result: Pass.

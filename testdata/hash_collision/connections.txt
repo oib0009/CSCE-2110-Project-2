@@ -1,0 +1,5 @@
+# BuildingA|BuildingB
+Library|Science
+Science|Library
+Library|Missing
+Library

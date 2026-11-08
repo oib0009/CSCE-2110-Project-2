@@ -1,7 +1,5 @@
 CSCE 2110 Project 2 - Design Document
 
-OUTLINE ONLY
-
 1. System overview
 Smart Campus Navigation and Facility Analytics System.
 
@@ -16,10 +14,26 @@ Smart Campus Navigation and Facility Analytics System.
 1) buildings.txt  2) connections.txt  3) facilities.txt  4) departments.txt
 
 4. Algorithms and decisions
-Complete this section with the team's actual decisions, including hash function, collision strategy, graph traversal behavior, and department root/parent rules.
+- Facility IDs are trimmed and converted to uppercase before insertion or lookup.
+- FacilityHashTable starts with 17 buckets and uses separate chaining. Its hash
+  updates the index as (index * 31 + character) % capacity. A collision is an
+  accepted insertion into a nonempty bucket.
+- CampusGraph uses an undirected adjacency list and BFS.
+- DepartmentTree stores departments as a general tree.
+- DataLoader reads the four pipe-delimited files in the required order, ignores
+  blank/comment lines, and skips malformed, duplicate, or inconsistent records.
+- Building and department names are checked case-insensitively for uniqueness.
+- Connections are undirected for duplicate detection; self-connections and
+  references to unknown buildings are rejected.
+- Department records use an empty parent in memory for the file's NONE root
+  marker; parent records must appear before their children.
 
 5. Error handling and input validation
-Document actual behavior after implementation.
+- Missing files and invalid rows are retained as warnings in CampusData.
+- writeLoadReport prints per-file opened/loaded/skipped/warning counts followed
+  by the warning details.
+- Empty data fields, duplicate IDs/names/connections, invalid references, and
+  malformed field counts are rejected instead of being silently accepted.
 
 6. Team responsibilities
 Refer to CONTRIBUTIONS.txt.
