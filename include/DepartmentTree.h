@@ -22,7 +22,7 @@ class DepartmentTree {
 private:
     DepartmentNode* root; //Root node of the department tree.
 
-    DepartmentNode* findDepartmentNode(DepartmentNode* node, const string& name) const; //Function to find a department node by name.
+    DepartmentNode* findNode(DepartmentNode* node, const string& name) const; //Function to find a department node by name.
     void displayNode(DepartmentNode* node, int depth) const; //Function to display a department node and its children.
     void preorderNode(DepartmentNode* node, vector<string>& result) const; //Function to perform a preorder traversal of the department tree.
     void deleteNode(DepartmentNode* node); //Function to delete a department node and its children.
@@ -37,6 +37,6 @@ public:
     void searchDepartment(const string& name) const; //Function to search for a department in the tree.
     void displayHierarchy() const; //Function to display the department hierarchy.
     void runPreorder() const; //Function to run a preorder traversal of the department tree.
-}
+};
 
 #endif
