@@ -4,6 +4,7 @@
 *.exe
 *.out
 /a.out
+/campus
 /build/
 /bin/
 
