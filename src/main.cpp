@@ -31,8 +31,8 @@ void displayMenu() {
     cout << "6. Add department\n";
     cout << "7. Search department\n";
     cout << "8. Display department hierarchy\n";
-    cout << "9. Run preorder traveral\n";
-    cout << "0. Exit\n";
+    cout << "9. Run preorder traversal\n";
+    cout << "10. Exit\n";
     cout << "Choose an option: ";
 }
 
@@ -42,8 +42,8 @@ bool readMenuOption(int& option) {
     if (!getline(cin, line)) return false;
     stringstream input(line);
     char extra;
-    if (!(input >> option) || (input >> extra) || option < 1 || option > 10) {
-        cout << "Error: Invalid input. Enter a number between 1 and 10." << endl;
+    if (!(input >> option) || (input >> extra) || option < 0 || option > 10) {
+        cout << "Error: Invalid input. Enter a number between 0 and 10." << endl;
         option = -1;
     }
     return true;
@@ -79,7 +79,7 @@ int main(int argc, char* argv[]) {
         graph.addBuilding(building.name);
     }
     for (const ConnectionRecord& connection : data.connections) {
-        graph.addConnection(connection.buildingA. connection.buildingB);
+        graph.addConnection(connection.buildingA, connection.buildingB);
     }
 
     DepartmentTree departments;
@@ -100,7 +100,7 @@ int main(int argc, char* argv[]) {
         displayMenu();
         if (!readMenuOption(option)) break;
 
-        if (option == 0) {
+        if (option == 0 || option == 10) {
             cout << "Exiting program." << endl;
             break;
         }
@@ -118,8 +118,8 @@ int main(int argc, char* argv[]) {
         else if (option == 2) {
             cout << "Enter facility ID: ";
             if (!getline(cin, name)) break;
-            string id = FacililityHashTable::normalizeId(name);
-            if (!FacilityHastTable :: isValidId(id)) {
+            string id = FacilityHashTable::normalizeId(name);
+            if (!FacilityHashTable :: isValidId(id)) {
                 cout << "Invalid ID. Use F followed by exactly three digits." << endl;
             } else {
                 const Facility* facility = data.facilityById.find(id);
