@@ -1,6 +1,6 @@
 CSCE 2110 Project 2 - Contributions
 
-Team members:
+Team members: Olu, Ashish, Uriel
 
 Olu:
 - Assigned files/tasks: DataLoader.h/.cpp, Facility.h, FacilityHashTable.h/.cpp
