@@ -19,3 +19,141 @@ Expected: Invalid records are rejected with warnings; missing files do not crash
 Actual: All invalid fixture records were rejected with warnings; missing files
         produced four warnings without a crash.
 Result: Pass.
+
+Uriel-4 - Successful facility ID search [M1] [10.2]
+Input: Menu option 2, F004
+Expected: Displays facility F004 (Computer Lab A).
+Actual: Displayed F004 | Computer Lab A | Science Building | Computer Lab.
+Result: Pass.
+
+Uriel-5 - Lowercase facility ID search [M1] [10.2]
+Input: Menu option 2, f004
+Expected: Converts lowercase ID to uppercase and finds facility F004.
+Actual: Displayed F004 | Computer Lab A | Science Building | Computer Lab.
+Result: Pass.
+
+Uriel-6 - Invalid facility ID search [M1] [10.2]
+Input: Menu option 2, 004
+Expected: Displays an invalid ID format error.
+Actual: Displayed "Invalid ID. Use F followed by exactly three digits."
+Result: Pass.
+
+Uriel-7 - Facility ID not found [M1] [10.2]
+Input: Menu option 2, F999
+Expected: Displays a message indicating facility F999 was not found.
+Actual: Displayed "Facility not found: F999".
+Result: Pass.
+
+Uriel-8 - BFS from connected building [M1] [10.3]
+Input: Menu option 5, Library
+Expected: BFS visits 6 of 7 buildings in the correct order.
+Actual: Visited Library, Student Union, Business Building, Science Building, Gym, and Engineering Building. Reachable: 6 of 7 buildings.
+Result: Pass.
+
+Uriel-9 - BFS from isolated building [M1] [10.3]
+Input: Menu option 5, Observatory
+Expected: BFS visits only Observatory with distance 0.
+Actual: Visited only Observatory. Reachable: 1 of 7 buildings.
+Result: Pass.
+
+Uriel-10 - BFS with unknown starting building [M1] [10.3]
+Input: Menu option 5, Unknown Hall
+Expected: Displays an error indicating the building does not exist.
+Actual: Displayed an error for the unknown building without crashing.
+Result: Pass.
+
+Uriel-11 - Graph with multiple connected components [M1] [10.3]
+Input: Menu option 5, Library, then menu option 5, Observatory
+Expected: Library reaches 6 buildings, while Observatory reaches only itself, confirming two separate connected components.
+Actual: Library reached 6 of 7 buildings, while Observatory reached 1 of 7 buildings.
+Result: Pass.
+
+Uriel-12 - Search root department [M1] [10.4]
+Input: Menu option 7, University
+Expected: Finds University with no parent, 2 children, and depth 0.
+Actual: Displayed University with parent None, 2 children, and depth 0.
+Result: Pass.
+
+Uriel-13 - Search non-root department [M1] [10.4]
+Input: Menu option 7, Computer Science
+Expected: Finds Computer Science with parent College of Engineering and depth 2.
+Actual: Displayed Computer Science with parent College of Engineering and depth 2.
+Result: Pass.
+
+Uriel-14 - Search missing department [M1] [10.4]
+Input: Menu option 7, Medical School
+Expected: Displays a department not found message.
+Actual: Displayed an error indicating the department was not found.
+Result: Pass.
+
+Uriel-15 - Add department with unknown parent [M1] [10.4]
+Input: Menu option 6, Artificial Intelligence, Unknown College
+Expected: Displays an error for the unknown parent and does not add the department.
+Actual: Displayed an unknown parent error and rejected the department.
+Result: Pass.
+
+Uriel-16 - Add duplicate department [M1] [10.4]
+Input: Menu option 6, computer science, University
+Expected: Rejects the duplicate department regardless of capitalization.
+Actual: Displayed a duplicate department error and rejected the insertion.
+Result: Pass.
+
+Uriel-17 - Preorder traversal [M1] [10.4]
+Input: Menu option 9
+Expected: Displays departments in preorder traversal order.
+Actual: Displayed University, College of Engineering, Computer Science, Electrical Engineering, College of Science, Mathematics, Physics.
+Result: Pass.
+
+Uriel-18 - Invalid menu input [M1] [10.4]
+Input: abc
+Expected: Displays an invalid input error.
+Actual: Displayed an invalid input error and returned to the menu.
+Result: Pass.
+
+Uriel-19 - Out-of-range menu option [M1] [10.4]
+Input: 11
+Expected: Rejects the invalid menu option.
+Actual: Displayed an invalid menu option message and returned to the menu.
+Result: Pass.
+
+Uriel-20 - Blank input [M1] [10.4]
+Input: Press Enter without typing anything.
+Expected: Displays an invalid input error.
+Actual: Displayed an invalid input error and returned to the menu.
+Result: Pass.
+
+Uriel-21 - Blank department name [M1] [10.4]
+Input: Menu option 7, press Enter without entering a name.
+Expected: Displays an error indicating the name cannot be empty.
+Actual: Displayed "Error: Name cannot be empty."
+Result: Pass.
+
+Uriel-22 - Department name containing spaces [M1] [10.4]
+Input: Menu option 7, Computer Science
+Expected: Successfully finds the Computer Science department.
+Actual: Found Computer Science with parent College of Engineering and depth 2.
+Result: Pass.
+
+Uriel-23 - Repeated operations after an error [M1] [10.4]
+Input: abc, then menu option 7, University
+Expected: Displays an error for invalid input and allows another operation.
+Actual: Displayed an invalid input error, returned to the menu, and successfully found University.
+Result: Pass.
+
+Uriel-24 - Empty department tree [M1] [10.4]
+Input: Menu options 8 and 9
+Expected: Displays a message indicating no departments are loaded.
+Actual: Displayed "No departments are loaded." for both operations.
+Result: Pass.
+
+Uriel-25 - Add root department [M1] [10.4]
+Input: Menu option 6, University
+Expected: Creates University as the root without asking for a parent.
+Actual: Successfully added University without prompting for a parent.
+Result: Pass.
+
+Uriel-26 - Root-only tree [M1] [10.4]
+Input: Add University, then menu options 7 and 9
+Expected: University has no parent, 0 children, depth 0, and is the only department in preorder traversal.
+Actual: Displayed University with parent None, 0 children, and depth 0. Preorder displayed only University.
+Result: Pass.
