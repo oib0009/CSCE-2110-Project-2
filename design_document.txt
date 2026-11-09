@@ -27,6 +27,12 @@ Smart Campus Navigation and Facility Analytics System.
   references to unknown buildings are rejected.
 - Department records use an empty parent in memory for the file's NONE root
   marker; parent records must appear before their children.
+- Separate chaining was chosen because each bucket can hold many facilities, this
+  allows for collisions to be handled without overwriting any existing records.
+- Since separate chaining uses vectors that grow dynamically, the table can store
+  more than 17 facilities without rejecting any additional records due to it being full.
+- An adjacency list was also chosen because it stores only the connections each building has,
+  making it simple to display any neighbors and perform BFS without storing any unnecessary connections. 
 
 5. Error handling and input validation
 - Missing files and invalid rows are retained as warnings in CampusData.
