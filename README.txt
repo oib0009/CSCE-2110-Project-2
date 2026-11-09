@@ -1,4 +1,5 @@
 # CSCE 2110 Project 2: Smart Campus Navigation and Facility Analytics
+REPO LINK: https://github.com/oib0009/CSCE-2110-Project-2
 
 ## Milestone 1
 
