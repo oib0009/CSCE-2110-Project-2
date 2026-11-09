@@ -3,17 +3,24 @@ CSCE 2110 Project 2 - Contributions
 Team members:
 
 Olu:
-- Assigned files/tasks: DataLoader.h/.cpp, Facility.h, FacilityHashTable.h/.cpp;
-  parse and validate the instructor-provided data files and implement facility
-  lookup by normalized ID.
-- Meaningful commits: To be recorded when commits are made.
+- Assigned files/tasks: DataLoader.h/.cpp, Facility.h, FacilityHashTable.h/.cpp
+- Implemented data loading and parsing for the provided datasets. 
+- Implemented the facility hash table to store and search for the facilities using normalized IDs
+- Handled the validation of facility data. 
 
 Ash:
-- Assigned files/tasks: 
-- Meaningful commits: 
+- Assigned files/tasks: CampusGraph.h/.cpp and BFS implementation.
+- Implemented campus graph to represent the connections between campus locations.
+- Implemented Breadth-First-Search (BFS) to traverse the graph.
+- Developed the functionality for exploring the connected campus locations.
 
 Uriel:
-- Assigned files/tasks: 
-- Meaningful commits: 
+- Assigned files/tasks: DepartmentTree.h/.cpp and main.cpp
+- Implemented the department tree to organize and display department information.
+- Created the main menu and interaction functionality
+- Integrated teammates components into main.cpp.
 
-Shared work and review: 
+Shared work & review:
+- Reviewed each other's code to make sure that everything connected seamlessly.
+- Worked together to make sure requirements were met and communicated to resolve any issues and
+made changes as needed. 
