@@ -8,11 +8,9 @@ Olu:
 - Implemented the facility hash table to store and search for the facilities using normalized IDs
 - Handled the validation of facility data. 
 
-Ash:
-- Assigned files/tasks: CampusGraph.h/.cpp and BFS implementation.
-- Implemented campus graph to represent the connections between campus locations.
-- Implemented Breadth-First-Search (BFS) to traverse the graph.
-- Developed the functionality for exploring the connected campus locations.
+**Ashish Thapa — Campus Graph and BFS**
+
+I was responsible for implementing the Campus Graph and BFS features for Project 2. For the Final submission, I added shortest-path functionality using BFS with parent tracking and implemented the graph connectivity report. I also reviewed the integration of my graph functions with the Final menu and helped test the graph features. During testing, I identified and fixed [describe the actual bug you fixed].
 
 Uriel:
 - Assigned files/tasks: DepartmentTree.h/.cpp and main.cpp
